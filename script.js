@@ -22,3 +22,17 @@ const getImg = function () {
 };
 
 getImg();
+
+const load1 = document.getElementById("load1");
+const showImgs1 = document.getElementById("show-imgs");
+
+load1.addEventListener("click", function () {
+  showImgs1.innerHTML = "";
+});
+
+getImg.forEach((element) => {
+  const imgUrl = document.createElement("img");
+  imgUrl.src = element.url;
+  imgUrl.src = element.alt = "img";
+  showImgs1.appendChild(img);
+});
